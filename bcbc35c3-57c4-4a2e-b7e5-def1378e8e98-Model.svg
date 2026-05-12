@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<svg viewBox="0 0 1024 768" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd" xml:space="preserve" style="background-color:rgb(0,0,0);" >
+<defs >
+<style >g[clip-path] > * {vector-effect: non-scaling-stroke;}</style>
+<clipPath id="clipId0" >
+<path d="M0,768 1024,768 1024,0 0,0 z" />
+</clipPath>
+</defs>
+<g clip-path="url(#clipId0)" fill="none" stroke="rgb(255,255,255)" stroke-width="1px" >
+<polyline points="459.294,634.98 459.294,634.98 " />
+<polyline points="564.706,634.98 564.706,634.98 " />
+</g>
+<g clip-path="url(#clipId0)" fill="none" stroke="rgb(255,255,255)" stroke-width="1px" >
+<polyline points="459.294,760.471 564.706,760.471 " stroke-dasharray="7.529412,3.764706" />
+<polyline points="459.294,760.471 496.941,760.471 496.941,7.52941 459.294,7.52941 459.294,634.98 271.059,7.52941 120.471,7.52941 459.294,760.471 " />
+<polyline points="564.706,760.471 527.059,760.471 527.059,7.52941 564.706,7.52941 564.706,634.98 752.941,7.52941 903.529,7.52941 564.706,760.471 " />
+<polyline points="271.059,7.52941 120.471,7.52941 " stroke-dasharray="7.529412,3.764706" />
+<polyline points="752.941,7.52941 903.529,7.52941 " stroke-dasharray="7.529412,3.764706" />
+</g>
+</svg>
