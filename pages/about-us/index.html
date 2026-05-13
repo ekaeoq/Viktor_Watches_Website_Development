@@ -18,6 +18,10 @@
         <img src="../../favicon-512-square.png" alt="" />
         <span>Viktor Watch</span>
       </a>
+      <nav class="topbar__links" aria-label="Quick links">
+        <a href="../about-us/index.html">Story</a>
+        <a href="../shop/index.html">Buy</a>
+      </nav>
       <button class="menu-toggle" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false">
         <span data-menu-label>Menu</span>
       </button>
@@ -27,22 +31,23 @@
       <div class="menu-panel__bg"></div>
       <div class="menu-panel__inner">
         <nav class="menu-series" aria-label="Site pages">
-          <a href="../about-us/index.html">Our Story</a>
-          <a href="../model-jedan/index.html">Model Jedan</a>
-          <a href="../archive/index.html">Archive</a>
-          <a href="../shop/index.html">Current Release</a>
-          <a href="../updates/index.html">Updates</a>
+          <a href="../about-us/index.html" data-menu-preview data-title="Our Story" data-description="The workshop, the process, and the reason Viktor Watch exists." data-image="../../slike/workshop2.jpeg">Our Story</a>
+          <a href="../model-jedan/index.html" data-menu-preview data-title="Model Jedan" data-description="The first Viktor Watch: hand-finished, small-batch, and built slowly." data-image="../../slike/backgroundWeb.jpg">Model Jedan</a>
+          <a href="../archive/index.html" data-menu-preview data-title="Archive" data-description="A small record of finished watches, details, and workshop images." data-image="../../slike/DSC09955.jpg">Archive</a>
+          <a href="../shop/index.html" data-menu-preview data-title="Current Release" data-description="Release status, price, gallery, and details for Model Jedan." data-image="../../slike/watch5.jpeg">Current Release</a>
+          <a href="../updates/index.html" data-menu-preview data-title="Updates" data-description="Future release windows and notes from the bench." data-image="../../slike/watch1.png">Updates</a>
         </nav>
 
-        <div class="menu-feature">
-          <a class="menu-feature__media" href="../model-jedan/index.html">
-            <img src="../../slike/DSC09988.jpg" alt="Viktor Watch Model Jedan" />
+        <article class="menu-feature" aria-live="polite">
+          <a class="menu-feature__media" href="../model-jedan/index.html" data-menu-preview-link>
+            <img src="../../slike/backgroundWeb.jpg" alt="Viktor Watch Model Jedan" data-menu-preview-image />
           </a>
-          <div>
-            <p>Model Jedan</p>
-            <a class="button button--warm" href="../model-jedan/index.html">View Model</a>
+          <div class="menu-feature__body">
+            <p data-menu-preview-title>Model Jedan</p>
+            <span data-menu-preview-description>The first Viktor Watch: hand-finished, small-batch, and built slowly.</span>
+            <a class="button button--warm" href="../model-jedan/index.html" data-menu-preview-button>View Model</a>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </header>

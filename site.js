@@ -35,6 +35,45 @@
     }
   });
 
+  const previewLinks = document.querySelectorAll("[data-menu-preview]");
+  const previewImage = document.querySelector("[data-menu-preview-image]");
+  const previewTitle = document.querySelector("[data-menu-preview-title]");
+  const previewDescription = document.querySelector("[data-menu-preview-description]");
+  const previewLink = document.querySelector("[data-menu-preview-link]");
+  const previewButton = document.querySelector("[data-menu-preview-button]");
+
+  function setPreview(link) {
+    if (!link || !previewImage || !previewTitle || !previewDescription || !previewLink || !previewButton) {
+      return;
+    }
+
+    const title = link.dataset.title || link.textContent.trim();
+    const description = link.dataset.description || "";
+    const image = link.dataset.image || previewImage.getAttribute("src");
+    const href = link.getAttribute("href");
+
+    previewImage.classList.add("is-changing");
+    window.setTimeout(function () {
+      previewImage.setAttribute("src", image);
+      previewImage.setAttribute("alt", title);
+      previewTitle.textContent = title;
+      previewDescription.textContent = description;
+      previewLink.setAttribute("href", href);
+      previewButton.setAttribute("href", href);
+      previewButton.textContent = title === "Model Jedan" ? "View Model" : "Open " + title;
+      previewImage.classList.remove("is-changing");
+    }, 90);
+  }
+
+  previewLinks.forEach(function (link) {
+    link.addEventListener("mouseenter", function () {
+      setPreview(link);
+    });
+    link.addEventListener("focus", function () {
+      setPreview(link);
+    });
+  });
+
   const carousel = document.querySelector("[data-carousel]");
   if (!carousel) {
     return;
