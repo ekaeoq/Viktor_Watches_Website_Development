@@ -180,7 +180,7 @@ input {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(10, 10, 10, 0.96) 0%, rgba(21, 32, 34, 0.94) 42%, rgba(31, 45, 48, 0.88) 100%),
-    url("/slike/backgroundWeb.jpg") center bottom / cover;
+    url("slike/backgroundWeb.jpg") center bottom / cover;
   filter: saturate(0.86);
 }
 
@@ -274,7 +274,7 @@ main {
 }
 
 .hero-home__image {
-  background: url("/slike/backgroundWeb.jpg") center bottom / cover no-repeat;
+  background: url("slike/backgroundWeb.jpg") center bottom / cover no-repeat;
   transform: scale(1.01);
 }
 
