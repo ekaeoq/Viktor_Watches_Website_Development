@@ -9,9 +9,9 @@
     content="Workshop-built watches shaped by process, iteration, and serious intent."
   />
   <link rel="canonical" href="https://viktor.watch/" />
-  <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48-square.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="./favicon-192-square.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-square.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48-square.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192-square.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-square.png" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Viktor Watch" />
   <meta
@@ -19,453 +19,131 @@
     content="Workshop-built watches shaped by process, iteration, and serious intent."
   />
   <meta property="og:url" content="https://viktor.watch/" />
-  <meta property="og:image" content="https://viktor.watch/favicon-512-square.png" />
-  <meta property="og:image:width" content="512" />
-  <meta property="og:image:height" content="512" />
-  <meta property="og:site_name" content="Viktor Watch" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://viktor.watch/slike/backgroundWeb.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Viktor Watch" />
   <meta
     name="twitter:description"
     content="Workshop-built watches shaped by process, iteration, and serious intent."
   />
-  <meta name="twitter:image" content="https://viktor.watch/favicon-512-square.png" />
-  <link rel="stylesheet" href="./styles.css" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://viktor.watch/#organization",
-          "name": "Viktor Watch",
-          "url": "https://viktor.watch/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://viktor.watch/favicon-512-square.png",
-            "width": 512,
-            "height": 512
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://viktor.watch/#website",
-          "url": "https://viktor.watch/",
-          "name": "Viktor Watch",
-          "description": "Workshop-built watches shaped by process, iteration, and serious intent.",
-          "publisher": {
-            "@id": "https://viktor.watch/#organization"
-          }
-        }
-      ]
-    }
-  </script>
+  <meta name="twitter:image" content="https://viktor.watch/slike/backgroundWeb.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
-<body>
+<body class="home-page">
   <header class="site-header">
-    <div class="site-header__inner">
-      <a class="brand brand--link" href="#home" aria-label="Viktor Watch home">
-        <img class="brand__logo" src="./logoVV.png" alt="Viktor Watch logo" />
-        <div class="brand__meta">
-          <div class="brand__name">Viktor Watch</div>
-          <div class="brand__tag">Small workshop. Serious watches.</div>
-        </div>
+    <div class="topbar" aria-label="Primary">
+      <button class="menu-toggle" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false">
+        <span data-menu-label>Menu</span>
+      </button>
+      <a class="topbar__origin" href="/">Built in a small workshop</a>
+      <a class="topbar__brand" href="/" aria-label="Viktor Watch home">
+        <img src="/logoVV.png" alt="" />
+        <span>Viktor<br />Watch</span>
       </a>
-
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#home">Home</a>
-        <a href="#story">Story</a>
-        <a href="#model">Model Jedan</a>
-        <a href="#archive">Archive</a>
-        <a href="#shop">Shop</a>
-        <a href="#updates">Updates</a>
+      <nav class="topbar__right" aria-label="Quick links">
+        <a href="/pages/about-us/">Our Story</a>
+        <a class="topbar__icon" href="/pages/shop/" aria-label="Shop">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 9h10l1 11H6L7 9Z"></path>
+            <path d="M9 9V7a3 3 0 0 1 6 0v2"></path>
+          </svg>
+        </a>
+        <a class="topbar__icon" href="/pages/contact/" aria-label="Contact">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 21a8 8 0 0 0-16 0"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
       </nav>
+    </div>
+
+    <div class="menu-panel" id="site-menu" aria-hidden="true">
+      <div class="menu-panel__bg"></div>
+      <div class="menu-panel__inner">
+        <nav class="menu-series" aria-label="Collections">
+          <a href="/pages/model-jedan/">01 Series</a>
+          <a href="/pages/archive/">Archive</a>
+          <a href="/pages/shop/">Current Release</a>
+          <a href="/pages/updates/">Production Updates</a>
+        </nav>
+
+        <div class="menu-feature">
+          <a class="menu-feature__media" href="/pages/model-jedan/">
+            <img src="/slike/DSC09988.jpg" alt="Viktor Watch Model Jedan" />
+          </a>
+          <div>
+            <p>Model Jedan</p>
+            <a class="button button--warm" href="/pages/model-jedan/">View 01 Series</a>
+          </div>
+        </div>
+
+        <nav class="menu-utility" aria-label="Support">
+          <a href="/pages/account/">My Account</a>
+          <a href="/pages/production-updates/">Production Updates</a>
+          <a href="/pages/returns-warranty/">Returns and Warranty</a>
+          <a href="/pages/track-order/">Track My Order</a>
+          <a href="/pages/contact/">Contact Us</a>
+          <a href="/pages/faq/">FAQ</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="hero" id="home" aria-label="Landing">
-      <div class="hero__media">
-        <img src="./slike/DSC09988.jpg" alt="Viktor Watch Model Jedan hero image" />
+    <section class="hero-home" aria-label="Viktor Watch">
+      <div class="hero-home__image" aria-hidden="true"></div>
+      <div class="hero-home__veil" aria-hidden="true"></div>
+      <p class="hero-home__outline" aria-hidden="true">VIKTOR WATCH</p>
+      <div class="hero-home__copy">
+        <p class="eyebrow">Small workshop. Serious watches.</p>
+        <h1>Viktor Watch</h1>
+        <p>
+          A one-person watch project built through sketches, fixtures, failed parts,
+          and the long physical work that turns an idea into something you can wear.
+        </p>
       </div>
-      <div class="hero__content">
-        <p class="eyebrow">Workshop-built watches</p>
+      <a class="orb-cta" href="/pages/model-jedan/">View<br />Model Jedan</a>
+    </section>
+
+    <section class="home-band">
+      <div class="home-band__copy">
+        <p class="eyebrow">The workshop</p>
         <h2>Not a factory. A workshop.</h2>
-        <p class="hero__lede">
-          Viktor Watch is built by one person in a small workshop. 
-          What began as a sketch became reality through years of effort.
-          <br>
-          <br>
-          Each one is built, assembled, finished, and handled by me from start to finish. 
-          Hand-sanded using custom-made fixtures, and hand-painted with a microbrush under 
-          magnification.
-        </p>
-        <div class="hero__actions">
-          <a class="btn btn--solid" href="#shop">Current Release</a>
-          <a class="btn btn--ghost" href="#story">Read the Story</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="intro-strip" aria-label="Brand principles">
-      <div class="intro-card">
-        <span>Built by me. Always.</span>
-        <p>These watches are built by me, in my workshop, and always will be.
-          That part of Viktor Watch is not going to change.</p>
-      </div>
-      <div class="intro-card">
-        <span>The process is part of the product.</span>
-        <p>Sketches, failed parts, fixtures, dust ..not hidden away, but part of the story 
-          and part of the watch itself, shared publicly on X.</p>
-      </div>
-      <div class="intro-card">
-        <span>Small workshop. Serious intent.</span>
-        <p>To make as many watches as one person realistically can, without compromising 
-          on quality or sacrificing the process.
-
+        <p>
+          Every Viktor Watch is built, assembled, finished, and handled by me from
+          start to finish. The process is not hidden away. It is part of the product.
         </p>
       </div>
-    </section>
-
-    <section class="story-layout" id="story">
-      <div class="section-heading">
-        <p class="eyebrow">The story</p>
-        <h2>A brand that started in a guy’s bedroom.</h2>
-      </div>
-
-      <article class="story-block story-block--image-left">
-        <div class="story-block__media">
-          <img src="./slike/watch4.jpg" alt="Workshop image from Viktor Watch process" />
-        </div>
-        <div class="story-block__content">
-          <p class="story-block__kicker">Where it starts</p>
-          <h3>Not mass-produced. Built with hands.</h3>
-          <p>
-            Viktor Watch was built from a simple idea: make something real,
-            slowly, carefully, and with enough conviction that it can stand next
-            to brands far bigger than it has any right to.
-          </p>
-          <p>
-  
-          </p>
-        </div>
-      </article>
-
-      <p class="quote-band">The process is the product.</p>
-
-      <article class="story-block story-block--image-right">
-        <div class="story-block__media">
-          <img src="./slike/room2.jpeg" alt="Dial and tool detail from the making process" />
-        </div>
-        <div class="story-block__content">
-          <p class="story-block__kicker">Why it matters</p>
-          <h3>Every detail was thought through.</h3>
-          <p>
-            A Viktor Watch is not only the final object. It is also every step that led to it.
-          </p>
-          <p>
-            When something is made on a small scale, every improvement matters. Every mistake teaches something. 
-            Every detail is tested, reconsidered, and refined again and again. Every finished watch carries
-            the weight of all the versions that came before it.
-
-          </p>
-        </div>
-      </article>
-
-      <p class="quote-band">Made through iteration, not convenience.</p>
-
-      <article class="story-block story-block--image-left">
-        <div class="story-block__media">
-          <img src="./slike/workshop2.jpeg" alt="Close view of Viktor Watch assembly and finishing" />
-        </div>
-        <div class="story-block__content">
-          <p class="story-block__kicker">The physical work</p>
-          <h3>Good objects are often defined by the work you no longer see.</h3>
-          <p>
-            Much of the process is repetitive. Some of it is frustrating. Some of it has to be redone entirely. 
-            But that unseen work is what gives the final object its weight, and I can't tell you how many times
-            I redid the very same boring thing, in order to improve just a tiny bit.
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <section class="model-section" id="model" aria-label="Model Jedan">
-      <div class="section-heading section-heading--light">
-        <p class="eyebrow">First release</p>
-        <h2>Model "Jedan"</h2>
-      </div>
-
-      <div class="model-grid">
-        <div class="model-grid__copy">
-          <p>
-            Model Jedan is the first Viktor Watch, built from years of sketches, prototypes, failed attempts, 
-            and repeated refinement. It marks the point where the ideas, process, and physical work behind the 
-            brand became a finished watch, to finally be worn, by me, for the people
-
-          </p>
-          <a class="text-link" href="#shop">See the current release</a>
-        </div>
-        <div class="model-grid__media">
-          <img src="./slike/watch5.jpeg" alt="Model Jedan photographed on strap" />
-        </div>
+      <div class="home-band__media">
+        <img src="/slike/workshop2.jpeg" alt="Viktor Watch workshop detail" />
       </div>
     </section>
 
-    <section class="archive-section" id="archive" aria-label="Archive">
-      <div class="section-heading">
-        <p class="eyebrow">Archive</p>
-        <h2>A small showcase of the watches we've made thus far..</h2>
+    <section class="home-product">
+      <div class="home-product__media">
+        <img src="/slike/watch5.jpeg" alt="Model Jedan photographed on strap" />
       </div>
-
-      <div class="archive-grid">
-        <article class="archive-card">
-          <div class="archive-card__media">
-            <img src="./slike/DSC09955.jpg" alt="Archived image of Model Jedan" />
-          </div>
-          <div class="archive-card__body">
-            <div class="archive-card__top">
-              <p class="archive-card__eyebrow">Model 01</p>
-              <p class="archive-card__status">First release</p>
-            </div>
-            <h3>"Jedan"</h3>
-            <p>
-              The first completed Viktor Watch. The piece that proved the
-              workshop, the process, and the standard could become something real.
-            </p>
-            <div class="archive-specs" aria-label="Archive specs">
-              <span>36mm case</span>
-              <span>Seiko NH35</span>
-              <span>100m WR</span>
-              <span>Hand-finished dial</span>
-            </div>
-            <a class="text-link" href="#shop">View current release</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="shop-section" id="shop" aria-label="Current release">
-      <div class="section-heading">
-        <p class="eyebrow">Current release</p>
-        <h2>Buy your own.</h2>
-      </div>
-
-      <section class="panel" aria-label="Product summary">
-        <div class="labels">
-          <div>Model "Jedan"</div>
-          <div>Current offering</div>
-        </div>
-
-        <article class="item">
-          <div class="carousel" id="carousel">
-            <div class="slides" id="slides">
-              <div class="slide">
-                <img src="./slike/DSC09988.jpg" alt="Model Jedan front angle" />
-              </div>
-              <div class="slide">
-                <img src="./slike/DSC09982.jpg" alt="Model Jedan side profile" />
-              </div>
-              <div class="slide">
-                <img src="./slike/DSC09249-2.jpg" alt="Model Jedan on wrist" />
-              </div>
-              <div class="slide">
-                <img src="./slike/DSC09955.jpg" alt="Model Jedan finishing detail" />
-              </div>
-              <div class="slide">
-                <img src="./slike/DSC09220-2.jpg" alt="Model Jedan dial detail" />
-              </div>
-            </div>
-
-            <button class="nav-btn left" id="prev" aria-label="Previous image">
-              <span class="chev" aria-hidden="true"></span>
-            </button>
-            <button class="nav-btn right" id="next" aria-label="Next image">
-              <span class="chev" aria-hidden="true"></span>
-            </button>
-
-            <div class="dots" id="dots" aria-label="Image navigation"></div>
-          </div>
-
-          <div class="item-top">
-            <div>
-              <div class="item-name">Viktor Watch - model "Jedan"</div>
-              <div class="meta-line">Quantity: <span class="mono">1</span></div>
-            </div>
-
-            <div class="right-stack">
-              <div class="item-price" id="itemPrice">€475</div>
-            </div>
-          </div>
-
-          <div class="specs" aria-label="Watch specs">
-            <div class="row">
-              <div class="k">Case</div>
-              <div class="v">316L stainless steel</div>
-            </div>
-            <div class="row">
-              <div class="k">Movement</div>
-              <div class="v">Seiko NH35</div>
-            </div>
-            <div class="row">
-              <div class="k">Dial Finish</div>
-              <div class="v">hand-sanded &amp; hand-painted</div>
-            </div>
-            <div class="row">
-              <div class="k">Strap</div>
-              <div class="v">beige rubber, 20mm</div>
-            </div>
-            <div class="row">
-              <div class="k">Crystal</div>
-              <div class="v">sapphire</div>
-            </div>
-            <div class="row">
-              <div class="k">Color</div>
-              <div class="v">metallic yellow</div>
-            </div>
-            <div class="row full">
-              <div class="k">Specs</div>
-              <div class="v">36mm · 11.85mm · 100m WR</div>
-            </div>
-          </div>
-        </article>
-
-        <section class="totals" aria-label="Totals">
-          <div class="line">
-            <div>Sub total</div>
-            <div class="val" id="subTotal">€475</div>
-          </div>
-          <div class="line">
-            <div>Shipping (flat rate)</div>
-            <div class="val" id="shipping">€35</div>
-          </div>
-          <div class="line grand">
-            <div>Total</div>
-            <div class="val" id="total">€510</div>
-          </div>
-        </section>
-
-        <div class="rule"></div>
-
-        <div class="cta">
-          <a class="btn btn--full" id="checkout" href="">Sold Out</a>
-        </div>
-
-        <p class="note">
-          This is a pre-order. Please allow 1-2 months for me to make your
-          watch. Your finished watch will be shipped to you ASAP.
+      <div class="home-product__copy">
+        <p class="eyebrow">01 Series</p>
+        <h2>Model Jedan</h2>
+        <p>
+          The first finished Viktor Watch: a small-batch, hand-finished piece built
+          from years of repetition, testing, and refinement.
         </p>
-        <p class="note">
-          International customs charges may apply on arrival.
-        </p>
-      </section>
-    </section>
-
-    <section class="mailing-section" id="updates" aria-label="Mailing list">
-      <div class="mailing-panel">
-        <p class="mailing-kicker">For future releases</p>
-        <p class="mailing-copy">
-          I am only one person, which means watches sell out fast. I can realistically
-          make around five pieces per month, so the best way to stay close to upcoming
-          releases and hear any news first is to leave your email below.
-        </p>
-        <form
-          action="https://buttondown.com/api/emails/embed-subscribe/ekaeo"
-          method="post"
-          class="mailing-form mailing-form--inline"
-        >
-          <label for="bd-email" class="sr-only">Email address</label>
-          <input type="email" name="email" id="bd-email" class="mailing-input" placeholder="Enter your email" required />
-          <input type="hidden" name="embed" value="1" />
-          <input type="submit" value="Subscribe" class="btn btn--solid mailing-submit" />
-        </form>
+        <div class="button-row">
+          <a class="button button--dark" href="/pages/model-jedan/">Explore Model</a>
+          <a class="button button--line" href="/pages/shop/">Current Release</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <div class="footer-left">
-        © <span id="year"></span> Viktor Watch. Built slowly, on purpose.
-      </div>
-      <div class="footer-right">
-        <a class="footer-link" href="https://x.com/ekaeoq" target="_blank" rel="noopener noreferrer">
-          x.com/ekaeoq
-        </a>
-      </div>
-    </div>
+    <div>© <span data-year></span> Viktor Watch</div>
+    <a href="https://x.com/ekaeoq" target="_blank" rel="noopener noreferrer">x.com/ekaeoq</a>
   </footer>
 
-  <script>
-    (function () {
-      const slides = document.getElementById("slides");
-      const dotWrap = document.getElementById("dots");
-      const prev = document.getElementById("prev");
-      const next = document.getElementById("next");
-
-      const subTotalEl = document.getElementById("subTotal");
-      const shippingEl = document.getElementById("shipping");
-      const totalEl = document.getElementById("total");
-
-      const currency = "€";
-      const pricePer = 475;
-      const shipping = 35;
-      const quantity = 1;
-
-      const count = slides.children.length;
-      const dots = [];
-      let index = 0;
-
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-      for (let i = 0; i < count; i += 1) {
-        const button = document.createElement("button");
-        button.className = "dot";
-        button.type = "button";
-        button.setAttribute("aria-label", "Go to image " + (i + 1));
-        button.addEventListener("click", function () {
-          go(i);
-        });
-        dotWrap.appendChild(button);
-        dots.push(button);
-      }
-
-      function renderDots() {
-        dots.forEach(function (dot, i) {
-          dot.setAttribute("aria-current", i === index ? "true" : "false");
-        });
-      }
-
-      function go(i) {
-        index = (i + count) % count;
-        slides.style.transform = "translateX(" + (-index * 100) + "%)";
-        renderDots();
-      }
-
-      prev.addEventListener("click", function () {
-        go(index - 1);
-      });
-
-      next.addEventListener("click", function () {
-        go(index + 1);
-      });
-
-      function format(value) {
-        return currency + value;
-      }
-
-      function recalc() {
-        const subtotal = quantity * pricePer;
-        const total = subtotal + shipping;
-        subTotalEl.textContent = format(subtotal);
-        shippingEl.textContent = format(shipping);
-        totalEl.textContent = format(total);
-      }
-
-      recalc();
-      go(0);
-    })();
-  </script>
+  <script src="/site.js"></script>
 </body>
 </html>
