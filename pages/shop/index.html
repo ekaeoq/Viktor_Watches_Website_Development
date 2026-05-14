@@ -53,40 +53,120 @@
   </header>
 
   <main>
-    <section class="page-hero" style="--hero-image: url('../../slike/watch5.jpeg')">
-      <div class="page-hero__copy">
-        <p class="eyebrow">Current Release</p>
-        <h1>Model "Jedan"</h1>
-        <p>Sold out for now. Future releases will be announced through the mailing list.</p>
+    <section class="shop-section" aria-label="Current release">
+      <div class="section-heading">
+        <p class="eyebrow">Current release</p>
+        <h1>Buy your own.</h1>
       </div>
-    </section>
 
-    <section class="product-layout">
-      <div class="carousel" data-carousel>
-        <div class="slides" data-slides>
-          <div class="slide"><img src="../../slike/DSC09988.jpg" alt="Model Jedan front angle" /></div>
-          <div class="slide"><img src="../../slike/DSC09982.jpg" alt="Model Jedan side profile" /></div>
-          <div class="slide"><img src="../../slike/DSC09249-2.jpg" alt="Model Jedan on wrist" /></div>
-          <div class="slide"><img src="../../slike/DSC09955.jpg" alt="Model Jedan finishing detail" /></div>
+      <section class="panel" aria-label="Product summary">
+        <div class="labels">
+          <div>Model "Jedan"</div>
+          <div>Current offering</div>
         </div>
-        <button class="nav-btn left" type="button" data-prev aria-label="Previous image"><span class="chev" aria-hidden="true"></span></button>
-        <button class="nav-btn right" type="button" data-next aria-label="Next image"><span class="chev" aria-hidden="true"></span></button>
-        <div class="dots" data-dots aria-label="Image navigation"></div>
-      </div>
 
-      <div class="product-copy">
-        <p class="eyebrow">Pre-order</p>
-        <h2>Sold Out</h2>
-        <p>
-          I can realistically make around five pieces per month. Join the mailing
-          list for future release windows and production notes.
+        <article class="item">
+          <div class="carousel" id="carousel" data-carousel>
+            <div class="slides" id="slides" data-slides>
+              <div class="slide">
+                <img src="../../slike/DSC09988.jpg" alt="Model Jedan front angle" />
+              </div>
+              <div class="slide">
+                <img src="../../slike/DSC09982.jpg" alt="Model Jedan side profile" />
+              </div>
+              <div class="slide">
+                <img src="../../slike/DSC09249-2.jpg" alt="Model Jedan on wrist" />
+              </div>
+              <div class="slide">
+                <img src="../../slike/DSC09955.jpg" alt="Model Jedan finishing detail" />
+              </div>
+              <div class="slide">
+                <img src="../../slike/DSC09220-2.jpg" alt="Model Jedan dial detail" />
+              </div>
+            </div>
+
+            <button class="nav-btn left" id="prev" type="button" data-prev aria-label="Previous image">
+              <span class="chev" aria-hidden="true"></span>
+            </button>
+            <button class="nav-btn right" id="next" type="button" data-next aria-label="Next image">
+              <span class="chev" aria-hidden="true"></span>
+            </button>
+
+            <div class="dots" id="dots" data-dots aria-label="Image navigation"></div>
+          </div>
+
+          <div class="item-top">
+            <div>
+              <div class="item-name">Viktor Watch - model "Jedan"</div>
+              <div class="meta-line">Quantity: <span class="mono">1</span></div>
+            </div>
+
+            <div class="right-stack">
+              <div class="item-price" id="itemPrice">&euro;475</div>
+            </div>
+          </div>
+
+          <div class="specs" aria-label="Watch specs">
+            <div class="row">
+              <div class="k">Case</div>
+              <div class="v">316L stainless steel</div>
+            </div>
+            <div class="row">
+              <div class="k">Movement</div>
+              <div class="v">Seiko NH35</div>
+            </div>
+            <div class="row">
+              <div class="k">Dial Finish</div>
+              <div class="v">hand-sanded &amp; hand-painted</div>
+            </div>
+            <div class="row">
+              <div class="k">Strap</div>
+              <div class="v">beige rubber, 20mm</div>
+            </div>
+            <div class="row">
+              <div class="k">Crystal</div>
+              <div class="v">sapphire</div>
+            </div>
+            <div class="row">
+              <div class="k">Color</div>
+              <div class="v">metallic yellow</div>
+            </div>
+            <div class="row full">
+              <div class="k">Specs</div>
+              <div class="v">36mm · 11.85mm · 100m WR</div>
+            </div>
+          </div>
+        </article>
+
+        <section class="totals" aria-label="Totals">
+          <div class="line">
+            <div>Sub total</div>
+            <div class="val" id="subTotal">&euro;475</div>
+          </div>
+          <div class="line">
+            <div>Shipping (flat rate)</div>
+            <div class="val" id="shipping">&euro;35</div>
+          </div>
+          <div class="line grand">
+            <div>Total</div>
+            <div class="val" id="total">&euro;510</div>
+          </div>
+        </section>
+
+        <div class="rule"></div>
+
+        <div class="cta">
+          <a class="btn btn--full" id="checkout" href="">Sold Out</a>
+        </div>
+
+        <p class="note">
+          This is a pre-order. Please allow 1-2 months for me to make your
+          watch. Your finished watch will be shipped to you ASAP.
         </p>
-        <div class="product-meta"><span>&euro;475</span><span>Shipping &euro;35</span></div>
-        <div class="button-row">
-          <a class="button button--dark" href="../updates/index.html">Get Release Updates</a>
-          <a class="button button--line" href="../model-jedan/index.html">View Details</a>
-        </div>
-      </div>
+        <p class="note">
+          International customs charges may apply on arrival.
+        </p>
+      </section>
     </section>
   </main>
 
