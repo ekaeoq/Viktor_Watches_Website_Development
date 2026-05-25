@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../../styles.css" />
 </head>
 
-<body>
+<body class="archive-page">
   <header class="site-header">
     <div class="topbar" aria-label="Primary">
       <a class="topbar__brand" href="../../index.html" aria-label="Viktor Watch home">
@@ -20,7 +20,7 @@
       </a>
       <nav class="topbar__links" aria-label="Quick links">
         <a href="../about-us/index.html">Story</a>
-        <a href="../shop/index.html">Buy</a>
+        <a href="../shop-next/index.html">Buy</a>
       </nav>
       <button class="menu-toggle" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false">
         <span data-menu-label>Menu</span>
@@ -34,7 +34,7 @@
           <a href="../about-us/index.html" data-menu-preview data-title="Our Story" data-description="The workshop, the process, and the reason Viktor Watch exists." data-image="../../slike/workshop2.jpeg">Our Story</a>
           <a href="../model-jedan/index.html" data-menu-preview data-title="Model Jedan" data-description="The first Viktor Watch: hand-finished, small-batch, and built slowly." data-image="../../slike/backgroundWeb.jpg">Model Jedan</a>
           <a href="../archive/index.html" data-menu-preview data-title="Archive" data-description="A small record of finished watches, details, and workshop images." data-image="../../slike/DSC09955.jpg">Archive</a>
-          <a href="../shop/index.html" data-menu-preview data-title="Current Release" data-description="Release status, price, gallery, and details for Model Jedan." data-image="../../slike/watch5.jpeg">Current Release</a>
+          <a href="../shop-next/index.html" data-menu-preview data-title="Current Release" data-description="Release status, price, gallery, and details for Model Jedan." data-image="../../slike/watch5.jpeg">Current Release</a>
           <a href="../updates/index.html" data-menu-preview data-title="Updates" data-description="Future release windows and notes from the bench." data-image="../../slike/watch1.png">Updates</a>
           <div class="menu-series__brand" aria-hidden="true">
             <img src="../../favicon-512-square.png" alt="" />
@@ -57,15 +57,31 @@
   </header>
 
   <main>
-    <section class="page-hero" style="--hero-image: url('../../slike/DSC09955.jpg')">
-      <div class="page-hero__copy">
-        <p class="eyebrow">Archive</p>
-        <h1>Finished watches and the work behind them.</h1>
-        <p>A small record of releases, images, and details from the workshop.</p>
-      </div>
+    <section class="archive-intro" aria-labelledby="archive-title">
+      <p class="eyebrow">Archive</p>
+      <h1 id="archive-title">Finished Watches</h1>
+      <p>A small record of releases, images, and details from the workshop.</p>
     </section>
 
-    <section class="archive-layout">
+    <section class="archive-layout" aria-label="Archived watches">
+      <article class="archive-card archive-card--upcoming">
+        <div class="archive-card__media archive-card__media--empty" aria-hidden="true">
+          <span>New watch</span>
+        </div>
+        <div>
+          <p class="eyebrow">Next model</p>
+          <h2>New Model</h2>
+          <p>
+            The first completed Viktor Watch. The piece that proved the workshop,
+            the process, and the standard could become something real.
+          </p>
+          <div class="button-row">
+            <a class="button button--dark" href="../model-jedan/index.html">View Model</a>
+            <a class="button button--line" href="../shop-next/index.html">Current Offering</a>
+          </div>
+        </div>
+      </article>
+
       <article class="archive-card">
         <div class="archive-card__media"><img src="../../slike/DSC09955.jpg" alt="Archived image of Model Jedan" /></div>
         <div>
@@ -77,7 +93,6 @@
           </p>
           <div class="button-row">
             <a class="button button--dark" href="../model-jedan/index.html">View Model</a>
-            <a class="button button--line" href="../shop/index.html">Current Release</a>
           </div>
         </div>
       </article>
