@@ -57,27 +57,21 @@
   </header>
 
   <main>
-    <section class="page-hero" style="--hero-image: url('../../slike/watch1.png')">
-      <div class="page-hero__copy">
-        <p class="eyebrow">Updates</p>
-        <h1>Future releases, first.</h1>
-        <p>Small production means releases move quickly. The mailing list is the cleanest way to hear what is coming.</p>
+    <section class="page-hero updates-signup" style="--hero-image: url('../../slike/watch1.png')" aria-labelledby="updates-title">
+      <div class="page-hero__copy updates-signup__copy">
+        <p class="eyebrow">Mailing list</p>
+        <h1 id="updates-title">Stay close to the next batch.</h1>
+        <p>
+          Small production means releases move quickly. Leave your email for
+          future release windows, production notes, and workshop updates.
+        </p>
+        <form action="https://buttondown.com/api/emails/embed-subscribe/ekaeo" method="post" class="mailing-form updates-signup__form">
+          <label for="bd-email" class="sr-only">Email address</label>
+          <input type="email" name="email" id="bd-email" placeholder="Enter your email" required />
+          <input type="hidden" name="embed" value="1" />
+          <input type="submit" value="Subscribe" class="button button--dark" />
+        </form>
       </div>
-    </section>
-
-    <section class="mailing-layout">
-      <p class="eyebrow">Mailing list</p>
-      <h2>Stay close to the next batch.</h2>
-      <p>
-        I am only one person, which means watches sell out fast. Leave your email
-        for future release windows, production notes, and workshop updates.
-      </p>
-      <form action="https://buttondown.com/api/emails/embed-subscribe/ekaeo" method="post" class="mailing-form">
-        <label for="bd-email" class="sr-only">Email address</label>
-        <input type="email" name="email" id="bd-email" placeholder="Enter your email" required />
-        <input type="hidden" name="embed" value="1" />
-        <input type="submit" value="Subscribe" class="button button--dark" />
-      </form>
     </section>
   </main>
 

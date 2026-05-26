@@ -880,23 +880,48 @@ h3 {
 }
 
 .updates-page .page-hero {
-  min-height: clamp(360px, 46svh, 520px);
-  align-items: end;
-  padding-top: calc(var(--topbar) + clamp(42px, 7vh, 82px));
-  padding-bottom: clamp(28px, 4vw, 48px);
+  height: 100svh;
+  min-height: 0;
+  align-items: center;
+  padding-top: calc(var(--topbar) + clamp(12px, 2.4vh, 28px));
+  padding-bottom: clamp(28px, 5vw, 64px);
 }
 
-.updates-page .page-hero__copy {
-  width: min(620px, 100%);
+.updates-page .page-hero::after {
+  background:
+    linear-gradient(180deg, rgba(5, 6, 6, 0.06), rgba(5, 6, 6, 0.28)),
+    linear-gradient(90deg, rgba(5, 6, 6, 0.48), rgba(5, 6, 6, 0.04) 68%);
 }
 
-.updates-page .page-hero__copy h1 {
-  font-size: clamp(2.7rem, 6vw, 5.7rem);
+.updates-signup__copy {
+  width: min(660px, 100%);
 }
 
-.updates-page .mailing-layout {
-  margin-top: 0;
-  padding-top: clamp(38px, 4.8vw, 62px);
+.updates-signup__copy h1 {
+  font-size: clamp(2.8rem, 6.8vw, 6.4rem);
+}
+
+.updates-signup__copy p:last-of-type {
+  max-width: 560px;
+}
+
+.updates-signup__form {
+  width: min(560px, 100%);
+  margin-top: clamp(24px, 3.4vw, 38px);
+}
+
+.updates-signup__form input[type="email"] {
+  border-color: rgba(243, 239, 231, 0.36);
+  background: rgba(243, 239, 231, 0.92);
+}
+
+.updates-signup__form input[type="submit"] {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.updates-page .site-footer {
+  display: none;
 }
 
 .page-section {
