@@ -1731,6 +1731,10 @@ h3 {
     color: rgba(22, 22, 20, 0.72);
   }
 
+  .shop-section .slides {
+    height: clamp(280px, 66vw, 390px);
+  }
+
   .model-page .page-hero::before {
     background-position: 56% center;
   }
