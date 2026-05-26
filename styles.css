@@ -410,6 +410,11 @@ main {
   transform: scale(1.01);
 }
 
+.hero-home__image img,
+.page-hero__mobile-image {
+  display: none;
+}
+
 .hero-home__veil {
   display: none;
 }
@@ -1021,6 +1026,7 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 
 .story-entry__copy {
@@ -1530,6 +1536,55 @@ h3 {
     letter-spacing: 0.14em;
   }
 
+  body:not(.model-page):not(.updates-page) .site-header {
+    color: var(--ink);
+  }
+
+  body:not(.model-page):not(.updates-page) .topbar {
+    background: linear-gradient(180deg, rgba(243, 243, 241, 0.94), rgba(243, 243, 241, 0.72) 72%, rgba(243, 243, 241, 0));
+  }
+
+  body:not(.model-page):not(.updates-page) .topbar__brand,
+  body:not(.model-page):not(.updates-page) .topbar__links a {
+    color: rgba(27, 24, 20, 0.76);
+  }
+
+  body.menu-open .site-header,
+  body.menu-open .topbar__brand,
+  body.menu-open .topbar__links a {
+    color: var(--paper);
+  }
+
+  .menu-panel {
+    width: 100%;
+  }
+
+  .menu-panel__inner {
+    display: flex;
+    align-items: center;
+    padding-top: calc(var(--topbar) + 18px);
+  }
+
+  .menu-feature {
+    display: none;
+  }
+
+  .menu-series {
+    gap: 10px;
+  }
+
+  .menu-series a {
+    min-height: 58px;
+    justify-content: center;
+    border-bottom-color: rgba(237, 237, 235, 0.16);
+    text-align: center;
+    font-size: clamp(1.08rem, 5vw, 1.45rem);
+  }
+
+  .menu-series__brand {
+    margin-top: clamp(34px, 10vh, 86px);
+  }
+
   .menu-feature__body {
     grid-template-columns: 1fr;
   }
@@ -1540,8 +1595,121 @@ h3 {
     justify-self: start;
   }
 
+  .hero-home {
+    min-height: 0;
+    padding: calc(var(--topbar) + 18px) var(--pad) 44px;
+    color: var(--ink);
+    background: transparent;
+  }
+
+  .hero-home__image {
+    position: relative;
+    inset: auto;
+    width: calc(100% + var(--pad) * 2);
+    margin-left: calc(var(--pad) * -1);
+    border-radius: 0;
+    background: none;
+    transform: none;
+    overflow: hidden;
+  }
+
+  .hero-home__image img,
+  .story-page .page-hero__mobile-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-home__image img {
+    border-radius: 0;
+    width: 112%;
+    max-width: none;
+    margin-left: -6%;
+  }
+
+  .story-page .page-hero__mobile-image {
+    border-radius: 8px;
+  }
+
+  .hero-home__veil,
+  .hero-home__outline {
+    display: none;
+  }
+
   .hero-home__copy {
+    width: 100%;
+    padding: 22px 0 0;
+    text-shadow: none;
+  }
+
+  .hero-home__copy .eyebrow,
+  .story-page .page-hero__copy .eyebrow {
+    color: rgba(22, 22, 20, 0.52);
+  }
+
+  .hero-home__copy p:last-child,
+  .story-page .page-hero__copy p:last-child {
+    color: rgba(22, 22, 20, 0.72);
+  }
+
+  .story-page .page-hero {
+    min-height: 0;
+    display: block;
+    padding: calc(var(--topbar) + 18px) var(--pad) 44px;
+    color: var(--ink);
+    background: transparent;
+  }
+
+  .story-page .page-hero::before {
+    display: none;
+  }
+
+  .page-hero::after,
+  .story-page .page-hero::after,
+  .model-page .page-hero::after {
+    display: block;
+    background:
+      linear-gradient(180deg, rgba(5, 6, 6, 0.12), rgba(5, 6, 6, 0.22) 38%, rgba(5, 6, 6, 0.76)),
+      linear-gradient(90deg, rgba(5, 6, 6, 0.62), rgba(5, 6, 6, 0.08) 76%);
+  }
+
+  .story-page .page-hero::after {
+    display: none;
+  }
+
+  .page-hero__copy {
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+  }
+
+  .story-page .page-hero__copy {
+    padding-top: 22px;
+    text-shadow: none;
+  }
+
+  .page-hero__copy p:last-child,
+  .hero-home__copy p:last-child {
+    color: rgba(243, 239, 231, 0.86);
+  }
+
+  .hero-home__copy p:last-child,
+  .story-page .page-hero__copy p:last-child {
+    color: rgba(22, 22, 20, 0.72);
+  }
+
+  .model-page .page-hero::before {
+    background-position: 56% center;
+  }
+
+  .updates-page .page-hero {
+    height: 100svh;
+    min-height: 0;
     padding-top: calc(var(--topbar) + 10vh);
+  }
+
+  .updates-page .page-hero::after {
+    background:
+      linear-gradient(180deg, rgba(5, 6, 6, 0.08), rgba(5, 6, 6, 0.34)),
+      linear-gradient(90deg, rgba(5, 6, 6, 0.46), rgba(5, 6, 6, 0.08) 76%);
   }
 
   .home-product {
@@ -1559,7 +1727,7 @@ h3 {
   .home-product__media img {
     width: auto;
     max-width: 100%;
-    max-height: clamp(260px, 54svh, 420px);
+    max-height: clamp(220px, 44svh, 360px);
     height: auto;
     object-fit: contain;
   }
