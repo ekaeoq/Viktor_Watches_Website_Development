@@ -569,6 +569,11 @@ h3 {
   color: rgba(22, 22, 20, 0.72);
 }
 
+.home-product__copy .eyebrow {
+  color: rgba(22, 22, 20, 0.52);
+  font-weight: 700;
+}
+
 .button-row {
   display: flex;
   flex-wrap: wrap;
