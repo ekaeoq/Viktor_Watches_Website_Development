@@ -23,6 +23,7 @@
 html {
   min-height: 100%;
   background: var(--ink);
+  scrollbar-gutter: stable;
   scroll-behavior: smooth;
 }
 

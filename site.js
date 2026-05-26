@@ -51,11 +51,13 @@
     const description = link.dataset.description || "";
     const image = link.dataset.image || previewImage.getAttribute("src");
     const href = link.getAttribute("href");
+    const position = title === "Updates" ? "center bottom" : "";
 
     previewImage.classList.add("is-changing");
     window.setTimeout(function () {
       previewImage.setAttribute("src", image);
       previewImage.setAttribute("alt", title);
+      previewImage.style.objectPosition = position;
       previewTitle.textContent = title;
       previewDescription.textContent = description;
       previewLink.setAttribute("href", href);
