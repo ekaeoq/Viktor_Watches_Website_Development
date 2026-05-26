@@ -1544,6 +1544,26 @@ h3 {
     padding-top: calc(var(--topbar) + 10vh);
   }
 
+  .home-product {
+    padding-top: 34px;
+  }
+
+  .home-product__media {
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+    line-height: 1;
+  }
+
+  .home-product__media img {
+    width: auto;
+    max-width: 100%;
+    max-height: clamp(260px, 54svh, 420px);
+    height: auto;
+    object-fit: contain;
+  }
+
   h1 {
     font-size: clamp(2.6rem, 14vw, 4.2rem);
   }
