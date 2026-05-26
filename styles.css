@@ -466,6 +466,30 @@ h3 {
   line-height: 1.55;
 }
 
+.hero-home__cta {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(243, 239, 231, 0.44);
+  color: rgba(243, 239, 231, 0.88);
+  background: transparent;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.hero-home__cta:hover,
+.hero-home__cta:focus-visible {
+  transform: translateY(-2px);
+}
+
 .hero-home__outline {
   position: absolute;
   z-index: 1;
@@ -1597,7 +1621,7 @@ h3 {
 
   .hero-home {
     min-height: 0;
-    padding: calc(var(--topbar) + 18px) var(--pad) 44px;
+    padding: calc(var(--topbar) + 12px) var(--pad) 34px;
     color: var(--ink);
     background: transparent;
   }
@@ -1638,8 +1662,18 @@ h3 {
 
   .hero-home__copy {
     width: 100%;
-    padding: 22px 0 0;
+    padding: 16px 0 0;
     text-shadow: none;
+  }
+
+  .hero-home__cta {
+    width: 100%;
+    min-height: 46px;
+    margin-top: 16px;
+    color: var(--paper);
+    background: var(--ink);
+    border-color: var(--ink);
+    text-align: center;
   }
 
   .hero-home__copy .eyebrow,
@@ -1649,6 +1683,7 @@ h3 {
 
   .hero-home__copy p:last-child,
   .story-page .page-hero__copy p:last-child {
+    margin-top: 14px;
     color: rgba(22, 22, 20, 0.72);
   }
 
