@@ -230,7 +230,7 @@ input {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(27, 24, 20, 0.94) 0%, rgba(36, 36, 34, 0.92) 52%, rgba(70, 70, 66, 0.82) 100%),
-    url("slike/backgroundWeb.jpg") center bottom / cover;
+    url("slike/backgroundWeb.webp") center bottom / cover;
   filter: saturate(0.78);
 }
 
@@ -406,7 +406,7 @@ main {
 }
 
 .hero-home__image {
-  background: url("slike/backgroundWeb.jpg") center bottom / cover no-repeat;
+  background: url("slike/backgroundWeb.webp") center bottom / cover no-repeat;
   transform: scale(1.01);
 }
 
@@ -840,11 +840,11 @@ h3 {
 }
 
 .story-page .page-hero::before {
-  background: url("slike/room2.jpeg") center bottom / cover no-repeat;
+  background: url("slike/room2.webp") center bottom / cover no-repeat;
 }
 
 .model-page .page-hero::before {
-  background: url("za_stranicu_slike/HGnNt9iXQAAPe-q.jpeg") center 62% / cover no-repeat;
+  background: url("za_stranicu_slike/HGnNt9iXQAAPe-q.webp") center 62% / cover no-repeat;
 }
 
 .page-hero::after {
