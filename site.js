@@ -76,6 +76,36 @@
     });
   });
 
+  const countdown = document.querySelector("[data-countdown]");
+  if (countdown) {
+    const target = new Date(countdown.dataset.countdown).getTime();
+    const daysNode = countdown.querySelector("[data-countdown-days]");
+    const hoursNode = countdown.querySelector("[data-countdown-hours]");
+    const minutesNode = countdown.querySelector("[data-countdown-minutes]");
+    const secondsNode = countdown.querySelector("[data-countdown-seconds]");
+
+    function pad(value) {
+      return String(value).padStart(2, "0");
+    }
+
+    function renderCountdown() {
+      const remaining = Math.max(0, target - Date.now());
+      const totalSeconds = Math.floor(remaining / 1000);
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      if (daysNode) daysNode.textContent = String(days);
+      if (hoursNode) hoursNode.textContent = pad(hours);
+      if (minutesNode) minutesNode.textContent = pad(minutes);
+      if (secondsNode) secondsNode.textContent = pad(seconds);
+    }
+
+    renderCountdown();
+    window.setInterval(renderCountdown, 1000);
+  }
+
   const carousel = document.querySelector("[data-carousel]");
   if (!carousel) {
     return;

@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../../styles.css" />
 </head>
 
-<body>
+<body class="shop-next-page">
   <header class="site-header">
     <div class="topbar" aria-label="Primary">
       <a class="topbar__brand" href="../../index.html" aria-label="Viktor Watch home">
@@ -100,7 +100,7 @@
             </div>
 
             <div class="right-stack">
-              <div class="item-price" id="itemPrice">&euro;0,99€</div>
+              <div class="item-price" id="itemPrice">&euro;0,99</div>
             </div>
           </div>
 
@@ -136,30 +136,33 @@
           </div>
         </article>
 
-        <section class="totals" aria-label="Totals">
-          <div class="line">
-            <div>Sub total</div>
-            <div class="val" id="subTotal">&euro;0,99€</div>
+        <section class="bid-panel" aria-label="Current bid and auction countdown">
+          <div>
+            <p class="note bid-panel__label">Current bid</p>
+            <div class="bid-panel__amount">&euro;0,99</div>
+            <p class="note bid-panel__instructions">
+              DM me on X or email your bid to victorwatches@gmail.com.
+            </p>
           </div>
-          <div class="line">
-            <div>Shipping (flat rate)</div>
-            <div class="val" id="shipping">&euro;35</div>
-          </div>
-          <div class="line grand">
-            <div>Total</div>
-            <div class="val" id="total">&euro;35,99€</div>
+          <div>
+            <p class="note bid-panel__label">Auction closes June 1, 2026 at 23:59 CEST</p>
+            <div class="bid-countdown" data-countdown="2026-06-01T23:59:00+02:00" aria-live="polite">
+              <span><strong data-countdown-days>0</strong> days</span>
+              <span><strong data-countdown-hours>00</strong> hours</span>
+              <span><strong data-countdown-minutes>00</strong> minutes</span>
+              <span><strong data-countdown-seconds>00</strong> seconds</span>
+            </div>
+            <p class="note bid-panel__updated">Last updated May 28, 2026 at 12:00 CEST</p>
           </div>
         </section>
 
-        <div class="rule"></div>
-
-        <div class="cta">
-          <a class="btn btn--full" id="checkout" href="">BIDDING starts 28th of May</a>
-        </div>
-
         <p class="note">
-          This is a pre-order. Please allow 1-2 months for me to make your
-          watch. Your finished watch will be shipped to you ASAP.
+          After purchasing the watch, please allow 1-2 weeks for me to finish
+          the box and prepare shipping. The watch will be shipped ASAP.
+        </p>
+        <p class="note">
+          Email bids are only for people already signed up to the newsletter.
+          If you have not signed up, please bid by DM on X.
         </p>
         <p class="note">
           International customs charges may apply on arrival.
