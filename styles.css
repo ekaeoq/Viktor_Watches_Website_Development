@@ -847,11 +847,11 @@ h3 {
 .bid-panel {
   display: grid;
   grid-template-columns: minmax(150px, 0.42fr) minmax(0, 1fr);
-  gap: clamp(20px, 4vw, 48px);
+  column-gap: clamp(20px, 4vw, 48px);
+  row-gap: 12px;
   align-items: start;
   margin-top: 12px;
-  padding: 12px 0 18px;
-  border-bottom: 1px solid rgba(27, 24, 20, 0.12);
+  padding: 12px 0 0;
 }
 
 .bid-panel__label {
@@ -864,6 +864,15 @@ h3 {
   font-family: var(--serif);
   font-size: clamp(2.1rem, 5vw, 4rem);
   line-height: 0.95;
+}
+
+.bid-panel__bidder-label {
+  margin-top: 14px;
+}
+
+.bid-panel__bidder {
+  margin-top: 3px;
+  color: var(--ink);
 }
 
 .bid-countdown {
@@ -891,9 +900,24 @@ h3 {
   margin-top: 10px;
 }
 
+.bid-panel__instruction-strip {
+  grid-column: 1 / -1;
+  margin-top: 0;
+  padding: 10px 0;
+  border-top: 1px solid rgba(27, 24, 20, 0.12);
+  border-bottom: 1px solid rgba(27, 24, 20, 0.12);
+}
+
+.bid-panel__instruction-label {
+  margin: 0 0 5px;
+}
+
 .bid-panel__instructions {
-  max-width: 260px;
-  margin-top: 12px;
+  margin-top: 0;
+}
+
+.bid-panel + .note {
+  margin-top: 16px;
 }
 
 .val {
