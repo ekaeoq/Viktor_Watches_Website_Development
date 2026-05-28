@@ -1892,6 +1892,14 @@ h3 {
     padding-right: 0;
   }
 
+  .titanium-piece-unique-page .row,
+  .titanium-piece-unique-page .row:nth-child(odd),
+  .titanium-piece-unique-page .row:nth-child(even),
+  .titanium-piece-unique-page .row.full {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .item-top {
     flex-direction: column;
   }
