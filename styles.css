@@ -784,27 +784,27 @@ h3 {
   padding-right: 18px;
 }
 
-.shop-next-page .specs {
+.titanium-piece-unique-page .specs {
   margin-top: 18px;
   border-bottom: 1px solid rgba(27, 24, 20, 0.12);
 }
 
-.shop-next-page .row {
+.titanium-piece-unique-page .row {
   min-height: 36px;
   padding-top: 7px;
   padding-bottom: 7px;
   border-bottom: 0;
 }
 
-.shop-next-page .row:nth-child(odd) {
+.titanium-piece-unique-page .row:nth-child(odd) {
   padding-right: 14px;
 }
 
-.shop-next-page .row:nth-child(even) {
+.titanium-piece-unique-page .row:nth-child(even) {
   padding-left: 14px;
 }
 
-.shop-next-page .row.full {
+.titanium-piece-unique-page .row.full {
   padding-right: 14px;
 }
 
