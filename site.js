@@ -76,19 +76,18 @@
     });
   });
 
-  const countdown = document.querySelector("[data-countdown]");
-  if (countdown) {
-    const target = new Date(countdown.dataset.countdown).getTime();
-    const daysNode = countdown.querySelector("[data-countdown-days]");
-    const hoursNode = countdown.querySelector("[data-countdown-hours]");
-    const minutesNode = countdown.querySelector("[data-countdown-minutes]");
-    const secondsNode = countdown.querySelector("[data-countdown-seconds]");
-
+  const countdowns = document.querySelectorAll("[data-countdown]");
+  if (countdowns.length) {
     function pad(value) {
       return String(value).padStart(2, "0");
     }
 
-    function renderCountdown() {
+    function renderCountdown(countdown) {
+      const target = new Date(countdown.dataset.countdown).getTime();
+      const daysNode = countdown.querySelector("[data-countdown-days]");
+      const hoursNode = countdown.querySelector("[data-countdown-hours]");
+      const minutesNode = countdown.querySelector("[data-countdown-minutes]");
+      const secondsNode = countdown.querySelector("[data-countdown-seconds]");
       const remaining = Math.max(0, target - Date.now());
       const totalSeconds = Math.ceil(remaining / 1000);
       const days = Math.floor(totalSeconds / 86400);
@@ -102,8 +101,12 @@
       if (secondsNode) secondsNode.textContent = pad(seconds);
     }
 
-    renderCountdown();
-    window.setInterval(renderCountdown, 1000);
+    function renderCountdowns() {
+      countdowns.forEach(renderCountdown);
+    }
+
+    renderCountdowns();
+    window.setInterval(renderCountdowns, 1000);
   }
 
   const carousel = document.querySelector("[data-carousel]");
