@@ -149,12 +149,16 @@
           </div>
         </article>
 
-        <section class="bid-panel" aria-label="Current bid and auction countdown">
+        <section
+          class="bid-panel"
+          aria-label="Current bid and auction countdown"
+          data-live-bid-url="https://docs.google.com/spreadsheets/d/e/2PACX-1vQqGA3qwEZYKRdYTfrmXZeDCfNFR_9IOIqhJ0TpMcZv3Fon9X3sKPm3KsZlHgparXd2bxUeKh9R8xT9/pub?output=csv"
+        >
           <div>
             <p class="k bid-panel__label">Current bid</p>
-            <div class="bid-panel__amount">&euro;1500</div>
+            <div class="bid-panel__amount" data-live-bid-price>&mdash;</div>
             <p class="note bid-panel__bidder-label">Current highest bidder</p>
-            <p class="note bid-panel__bidder">@zer0xsaood</p>
+            <p class="note bid-panel__bidder" data-live-bidder>&mdash;</p>
           </div>
           <div>
             <p class="k bid-panel__label">Auction closes May 31, 2026 at 23:59 CEST</p>
@@ -164,7 +168,7 @@
               <span><strong data-countdown-minutes>00</strong> minutes</span>
               <span><strong data-countdown-seconds>00</strong> seconds</span>
             </div>
-            <p class="note bid-panel__updated">Last updated May 30, 2026 at 9:59 CEST</p>
+            <p class="note bid-panel__updated" data-live-bid-updated>Loading live bid...</p>
           </div>
           <div class="bid-panel__instruction-strip">
             <p class="k bid-panel__instruction-label">How to bid</p>
@@ -181,6 +185,73 @@
   </main>
 
   <footer class="site-footer"><div>© <span data-year></span> Viktor Watch</div><a href="https://x.com/ekaeoq" target="_blank" rel="noopener noreferrer">x.com/ekaeoq</a></footer>
-  <script src="../../site.js"></script>
+  <script>
+    (function () {
+      const panel = document.querySelector("[data-live-bid-url]");
+      if (!panel) return;
+
+      const priceNode = panel.querySelector("[data-live-bid-price]");
+      const bidderNode = panel.querySelector("[data-live-bidder]");
+      const updatedNode = panel.querySelector("[data-live-bid-updated]");
+
+      function parseBidCsv(csv) {
+        const data = {};
+        csv.trim().split(/\r?\n/).forEach(function (line) {
+          const clean = line.trim().replace(/^"|"$/g, "").replace(/""/g, '"');
+          const split = clean.indexOf(",");
+          if (split > -1) {
+            data[clean.slice(0, split).trim().toLowerCase()] = clean.slice(split + 1).trim();
+          }
+        });
+        return data;
+      }
+
+      function formatBid(value) {
+        const clean = String(value || "").trim();
+        if (!clean) return "";
+        return clean.includes("€") ? clean : "€" + clean;
+      }
+
+      function formatBidder(value) {
+        const clean = String(value || "").trim();
+        if (!clean) return "";
+        return clean.startsWith("@") ? clean : "@" + clean;
+      }
+
+      function timestamp() {
+        return new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit"
+        });
+      }
+
+      async function loadBid() {
+        try {
+          const separator = panel.dataset.liveBidUrl.includes("?") ? "&" : "?";
+          const response = await fetch(panel.dataset.liveBidUrl + separator + "t=" + Date.now(), {
+            cache: "no-store"
+          });
+          if (!response.ok) throw new Error("Bid feed returned " + response.status);
+
+          const data = parseBidCsv(await response.text());
+          const price = formatBid(data.price || data.bid || data["current bid"]);
+          const bidder = formatBidder(data.highest || data.bidder || data["highest bidder"]);
+
+          if (!price) throw new Error("Missing price in bid feed");
+          if (priceNode) priceNode.textContent = price;
+          if (bidder && bidderNode) bidderNode.textContent = bidder;
+          if (updatedNode) updatedNode.textContent = data.updated ? "Last updated " + data.updated : "Last checked " + timestamp();
+        } catch (error) {
+          if (updatedNode) updatedNode.textContent = "Live feed error " + timestamp();
+          console.error(error);
+        }
+      }
+
+      loadBid();
+      window.setInterval(loadBid, 5000);
+    }());
+  </script>
+  <script src="../../site.js?v=20260530-live-bid-2"></script>
 </body>
 </html>
