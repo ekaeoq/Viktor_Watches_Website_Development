@@ -69,10 +69,14 @@
         </p>
         <form action="https://buttondown.com/api/emails/embed-subscribe/ekaeo" method="post" class="mailing-form updates-signup__form">
           <label for="bd-email" class="sr-only">Email address</label>
-          <input type="email" name="email" id="bd-email" placeholder="Enter your email" required />
+          <input type="email" name="email" id="bd-email" placeholder="Unavailable" disabled aria-disabled="true" />
           <input type="hidden" name="embed" value="1" />
-          <input type="submit" value="Subscribe" class="button button--dark" />
+          <input type="submit" value="Disabled" class="button button--dark" disabled aria-disabled="true" />
         </form>
+        <p class="note updates-signup__notice">
+          Buttondown disabled my account today, so the email form does not work.
+          Please DM your information to my X.
+        </p>
       </div>
     </section>
   </main>
