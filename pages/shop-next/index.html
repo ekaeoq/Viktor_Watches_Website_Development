@@ -152,7 +152,7 @@
         <section
           class="bid-panel"
           aria-label="Current bid and auction countdown"
-          data-live-bid-url="https://docs.google.com/spreadsheets/d/e/2PACX-1vQqGA3qwEZYKRdYTfrmXZeDCfNFR_9IOIqhJ0TpMcZv3Fon9X3sKPm3KsZlHgparXd2bxUeKh9R8xT9/pub?output=csv"
+          data-live-bid-url="https://script.google.com/macros/s/AKfycbx_yz4d7b1b2E14K-2bm6aIDha_7PxIvafQwfTiRZ1Iz42Uj7BirwmBec0a18rrZ9Ya/exec"
         >
           <div>
             <p class="k bid-panel__label">Current bid</p>
@@ -194,18 +194,6 @@
       const bidderNode = panel.querySelector("[data-live-bidder]");
       const updatedNode = panel.querySelector("[data-live-bid-updated]");
 
-      function parseBidCsv(csv) {
-        const data = {};
-        csv.trim().split(/\r?\n/).forEach(function (line) {
-          const clean = line.trim().replace(/^"|"$/g, "").replace(/""/g, '"');
-          const split = clean.indexOf(",");
-          if (split > -1) {
-            data[clean.slice(0, split).trim().toLowerCase()] = clean.slice(split + 1).trim();
-          }
-        });
-        return data;
-      }
-
       function formatBid(value) {
         const clean = String(value || "").trim();
         if (!clean) return "";
@@ -226,6 +214,26 @@
         });
       }
 
+      function formatUpdated(value) {
+        const clean = String(value || "").trim();
+        if (!clean) return "Last checked " + timestamp();
+        const parsed = new Date(clean);
+
+        if (Number.isNaN(parsed.getTime())) {
+          return clean.toLowerCase().startsWith("last updated") ? clean : "Last updated " + clean;
+        }
+
+        return "Last updated " + parsed.toLocaleString("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+          hour: "numeric",
+          minute: "2-digit",
+          second: "2-digit",
+          timeZone: "Europe/Zagreb"
+        });
+      }
+
       async function loadBid() {
         try {
           const separator = panel.dataset.liveBidUrl.includes("?") ? "&" : "?";
@@ -234,14 +242,14 @@
           });
           if (!response.ok) throw new Error("Bid feed returned " + response.status);
 
-          const data = parseBidCsv(await response.text());
+          const data = await response.json();
           const price = formatBid(data.price || data.bid || data["current bid"]);
           const bidder = formatBidder(data.highest || data.bidder || data["highest bidder"]);
 
           if (!price) throw new Error("Missing price in bid feed");
           if (priceNode) priceNode.textContent = price;
           if (bidder && bidderNode) bidderNode.textContent = bidder;
-          if (updatedNode) updatedNode.textContent = data.updated ? "Last updated " + data.updated : "Last checked " + timestamp();
+          if (updatedNode) updatedNode.textContent = formatUpdated(data.updated);
         } catch (error) {
           if (updatedNode) updatedNode.textContent = "Live feed error " + timestamp();
           console.error(error);
@@ -252,6 +260,6 @@
       window.setInterval(loadBid, 5000);
     }());
   </script>
-  <script src="../../site.js?v=20260530-live-bid-3"></script>
+  <script src="../../site.js?v=20260530-live-bid-4"></script>
 </body>
 </html>
