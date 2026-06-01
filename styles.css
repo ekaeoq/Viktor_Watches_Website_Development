@@ -1045,16 +1045,49 @@ h3 {
 }
 
 .updates-signup__form {
-  width: min(560px, 100%);
-  margin-top: clamp(24px, 3.4vw, 38px);
+  width: min(430px, 100%);
+  margin-top: clamp(16px, 2.4vw, 24px);
+  flex-wrap: wrap;
+  gap: 6px 8px;
+}
+
+.updates-signup__form label,
+.updates-signup__form p {
+  flex: 0 0 100%;
+}
+
+.updates-signup__form label {
+  color: rgba(243, 239, 231, 0.72);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.updates-signup__form p {
+  margin: -4px 0 0;
+  color: rgba(243, 239, 231, 0.24);
+  font-size: 0.5rem;
+  line-height: 1;
+}
+
+.updates-signup__form a {
+  color: rgba(243, 239, 231, 0.28);
+  text-decoration-color: rgba(243, 239, 231, 0.1);
+  text-underline-offset: 0.18em;
 }
 
 .updates-signup__form input[type="email"] {
+  min-height: 42px;
+  padding: 0 12px;
   border-color: rgba(243, 239, 231, 0.36);
   background: rgba(243, 239, 231, 0.92);
 }
 
 .updates-signup__form input[type="submit"] {
+  min-height: 42px;
+  padding: 0 14px;
   color: var(--ink);
   background: var(--paper);
 }
@@ -1915,6 +1948,10 @@ h3 {
   .button,
   .mailing-form input[type="submit"] {
     width: 100%;
+  }
+
+  .updates-signup__form input[type="submit"] {
+    min-height: 42px;
   }
 
   .spec-list div {
