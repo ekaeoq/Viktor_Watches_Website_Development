@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Shop | Viktor Watch</title>
-  <meta name="description" content="Current Viktor Watch release." />
+  <title>Finished Auction | Viktor Watch</title>
+  <meta name="description" content="The finished Viktor Watch Titanium Piece Unique auction." />
   <link rel="icon" type="image/png" sizes="48x48" href="../../favicon-48-square.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="../../favicon-192-square.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon-square.png" />
@@ -34,7 +34,7 @@
           <a href="../about-us/index.html" data-menu-preview data-title="Our Story" data-description="The workshop, the process, and the reason Viktor Watch exists." data-image="../../pictures_Story/storyMENU.webp">Our Story</a>
           <a href="../model-jedan/index.html" data-menu-preview data-title="Model Jedan" data-description="The first Viktor Watch: hand-finished, small-batch, and built slowly." data-image="../../slike/backgroundWeb.webp">Model Jedan</a>
           <a href="../archive/index.html" data-menu-preview data-title="Archive" data-description="A small record of finished watches, details, and workshop images." data-image="../../pictures_Story/arctiveMENU.webp">Archive</a>
-          <a href="../shop-next/index.html" data-menu-preview data-title="Current Release" data-description="Release status, price, gallery, and details for Model Jedan." data-image="../../hidden_titanium.webp">Current Release</a>
+          <a href="../shop-next/index.html" data-menu-preview data-title="Finished Auction" data-description="Auction finished, gallery, and details for the Titanium Piece Unique." data-image="../../hidden_titanium.webp">Finished Auction</a>
           <a href="../updates/index.html" data-menu-preview data-title="Updates" data-description="Future release windows and notes from the bench." data-image="../../pictures_Story/updatesMENU.webp">Updates</a>
           <div class="menu-series__brand" aria-hidden="true">
             <img src="../../favicon-512-square.png" alt="" />
@@ -57,16 +57,16 @@
   </header>
 
   <main>
-    <section class="shop-section" aria-label="Current release">
+    <section class="shop-section" aria-label="Auction finished release">
       <div class="section-heading">
-        <p class="eyebrow">Current release</p>
+        <p class="eyebrow">Auction finished</p>
         <h1>A very special Viktor Watch.</h1>
       </div>
 
       <section class="panel" aria-label="Product summary">
         <div class="labels">
           <div>Titanium Pièce Unique</div>
-          <div>Current offering</div>
+          <div>Auction closed</div>
         </div>
 
         <article class="item">
@@ -149,31 +149,20 @@
           </div>
         </article>
 
-        <section
-          class="bid-panel"
-          aria-label="Current bid and auction countdown"
-          data-live-bid-url="https://script.google.com/macros/s/AKfycbx_yz4d7b1b2E14K-2bm6aIDha_7PxIvafQwfTiRZ1Iz42Uj7BirwmBec0a18rrZ9Ya/exec"
-        >
+        <section class="bid-panel bid-panel--finished" aria-label="Auction finished status">
           <div>
-            <p class="k bid-panel__label">Current bid</p>
-            <div class="bid-panel__amount" data-live-bid-price>&mdash;</div>
-            <p class="note bid-panel__bidder-label">Current highest bidder</p>
-            <p class="note bid-panel__bidder" data-live-bidder>&mdash;</p>
+            <p class="k bid-panel__label">Sold for</p>
+            <div class="bid-panel__amount">3500&euro;</div>
+            <p class="note bid-panel__bidder-label">Bidding is now closed.</p>
           </div>
           <div>
-            <p class="k bid-panel__label">Auction closes May 31, 2026 at 23:59 CEST</p>
-            <div class="bid-countdown" data-countdown="2026-05-31T23:59:59+02:00" aria-live="polite">
-              <span><strong data-countdown-days>0</strong> days</span>
-              <span><strong data-countdown-hours>00</strong> hours</span>
-              <span><strong data-countdown-minutes>00</strong> minutes</span>
-              <span><strong data-countdown-seconds>00</strong> seconds</span>
-            </div>
-            <p class="note bid-panel__updated" data-live-bid-updated>Loading live bid...</p>
+            <p class="k bid-panel__label">Closed May 31, 2026 at 23:59 CEST</p>
+            <p class="note bid-panel__updated">Thank you to everyone who followed along and placed a bid.</p>
           </div>
           <div class="bid-panel__instruction-strip">
-            <p class="k bid-panel__instruction-label">How to bid</p>
+            <p class="k bid-panel__instruction-label">Next watches</p>
             <p class="note bid-panel__instructions">
-              DM ME ON X OR EMAIL YOUR BID TO VIKTORWATCHES@GMAIL.COM.
+              For future releases, join the mailing list or DM me on X.
             </p>
           </div>
         </section>
@@ -185,81 +174,6 @@
   </main>
 
   <footer class="site-footer"><div>© <span data-year></span> Viktor Watch</div><a href="https://x.com/ekaeoq" target="_blank" rel="noopener noreferrer">x.com/ekaeoq</a></footer>
-  <script>
-    (function () {
-      const panel = document.querySelector("[data-live-bid-url]");
-      if (!panel) return;
-
-      const priceNode = panel.querySelector("[data-live-bid-price]");
-      const bidderNode = panel.querySelector("[data-live-bidder]");
-      const updatedNode = panel.querySelector("[data-live-bid-updated]");
-
-      function formatBid(value) {
-        const clean = String(value || "").trim();
-        if (!clean) return "";
-        return clean.includes("€") ? clean : "€" + clean;
-      }
-
-      function formatBidder(value) {
-        const clean = String(value || "").trim();
-        if (!clean) return "";
-        return clean.startsWith("@") ? clean : "@" + clean;
-      }
-
-      function timestamp() {
-        return new Date().toLocaleTimeString([], {
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit"
-        });
-      }
-
-      function formatUpdated(value) {
-        const clean = String(value || "").trim();
-        if (!clean) return "Last checked " + timestamp();
-        const parsed = new Date(clean);
-
-        if (Number.isNaN(parsed.getTime())) {
-          return clean.toLowerCase().startsWith("last updated") ? clean : "Last updated " + clean;
-        }
-
-        return "Last updated " + parsed.toLocaleString("en-US", {
-          month: "long",
-          day: "numeric",
-          year: "numeric",
-          hour: "numeric",
-          minute: "2-digit",
-          second: "2-digit",
-          timeZone: "Europe/Zagreb"
-        });
-      }
-
-      async function loadBid() {
-        try {
-          const separator = panel.dataset.liveBidUrl.includes("?") ? "&" : "?";
-          const response = await fetch(panel.dataset.liveBidUrl + separator + "t=" + Date.now(), {
-            cache: "no-store"
-          });
-          if (!response.ok) throw new Error("Bid feed returned " + response.status);
-
-          const data = await response.json();
-          const price = formatBid(data.price || data.bid || data["current bid"]);
-          const bidder = formatBidder(data.highest || data.bidder || data["highest bidder"]);
-
-          if (!price) throw new Error("Missing price in bid feed");
-          if (priceNode) priceNode.textContent = price;
-          if (bidder && bidderNode) bidderNode.textContent = bidder;
-          if (updatedNode) updatedNode.textContent = formatUpdated(data.updated);
-        } catch (error) {
-          if (updatedNode) updatedNode.textContent = "Live feed error " + timestamp();
-          console.error(error);
-        }
-      }
-
-      loadBid();
-      window.setInterval(loadBid, 5000);
-    }());
-  </script>
   <script src="../../site.js?v=20260530-live-bid-4"></script>
 </body>
 </html>
