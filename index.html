@@ -38,7 +38,8 @@
         <span>Viktor Watch</span>
       </a>
       <nav class="topbar__links" aria-label="Quick links">
-        <a href="./pages/about-us/index.html">Story</a>
+        <a href="./pages/blog/index.html">Blog</a>
+        <a class="topbar__link--story" href="./pages/about-us/index.html">Story</a>
         <a href="./pages/shop-next/index.html">Buy</a>
       </nav>
       <button class="menu-toggle" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false">
@@ -51,6 +52,7 @@
       <div class="menu-panel__inner">
         <nav class="menu-series" aria-label="Site pages">
           <a href="./pages/about-us/index.html" data-menu-preview data-title="Our Story" data-description="The workshop, the process, and the reason Viktor Watch exists." data-image="./pictures_Story/storyMENU.webp">Our Story</a>
+          <a href="./pages/blog/index.html" data-menu-preview data-title="Blog" data-description="Workshop notes, process records, and longer thoughts from Viktor Watch." data-image="./pictures_Story/updatesMENU.webp">Blog</a>
           <a href="./pages/model-jedan/index.html" data-menu-preview data-title="Model Jedan" data-description="The first Viktor Watch: hand-finished, small-batch, and built slowly." data-image="./slike/backgroundWeb.webp">Model Jedan</a>
           <a href="./pages/archive/index.html" data-menu-preview data-title="Archive" data-description="A small record of finished watches, details, and workshop images." data-image="./pictures_Story/arctiveMENU.webp">Archive</a>
           <a href="./pages/shop-next/index.html" data-menu-preview data-title="Finished Auction" data-description="Auction finished, gallery, and details for the Titanium Piece Unique." data-image="./hidden_titanium.webp">Finished Auction</a>
@@ -92,20 +94,95 @@
       </div>
     </section>
 
-    <section class="home-product">
-      <div class="home-product__media">
-        <img src="./pic_jedan_main.webp" alt="Model Jedan photographed on strap" />
-      </div>
-      <div class="home-product__copy">
-        <p class="eyebrow">01 Series</p>
-        <h2>Model Jedan</h2>
+    <section class="story-flow-section home-story-section" aria-labelledby="home-story-title">
+      <div class="story-intro">
+        <p class="eyebrow">The Story</p>
+        <h2 id="home-story-title">A brand that started in a guy's bedroom.</h2>
         <p>
-          The first finished Viktor Watch: a small-batch, hand-finished piece built
-          from years of repetition, testing, and refinement.
+          Viktor Watch started as a simple idea: make something real, slowly,
+          carefully, and with enough conviction that it could stand on its own.
         </p>
-        <div class="button-row">
-          <a class="button button--dark" href="./pages/model-jedan/index.html">Explore Model</a>
-          <a class="button button--line" href="./pages/shop-next/index.html">Finished Auction</a>
+      </div>
+
+      <div class="story-flow" aria-label="Workshop process images">
+        <article class="story-entry">
+          <img src="./pictures_Story/updatesMENU.webp" alt="Viktor Watch workshop detail" />
+          <div class="story-entry__copy">
+            <p class="eyebrow">The workshop</p>
+            <h3>Every piece starts here.</h3>
+            <p>
+              The fixtures, the dust, the failed parts, and the repeated
+              sanding are not separate from the watch. They are the reason the
+              final object has weight.
+            </p>
+          </div>
+        </article>
+
+        <article class="story-entry">
+          <img src="./pictures_Story/storyMENU.webp" alt="Viktor Watch dials during production" />
+          <div class="story-entry__copy">
+            <p class="eyebrow">Workshop note</p>
+            <h3>Everything starts with CAD.</h3>
+            <p>
+              Every watch dial was once just a sketch, later turned into a model, and then exported
+              into a laser-cutting software. The process of getting the right laser settings was excruciating,
+              and was probably the thing that took me the longest to figure out. I'm not exaggerating when I say
+              that I spent more than a year just trying to cut the dials correctly.
+            </p>
+          </div>
+        </article>
+
+        <article class="story-entry">
+          <img src="./pictures_Story/G_ZBrY8XkAABPmZ.webp" alt="Viktor Watch assembly and finishing process" />
+          <div class="story-entry__copy">
+            <p class="eyebrow">The physical work</p>
+            <h3>Good objects carry work you no longer see.</h3>
+            <p>
+              Much of the process is repetitive. Some of it has to be redone
+              entirely. Back then, I had no ventilation of any sort, and the stench you get from
+              laser is one of the worst smells imaginable.
+            </p>
+          </div>
+        </article>
+
+        <article class="story-entry">
+          <img src="./pictures_Story/G_ZBrZPW8AENKRH.webp" alt="Viktor Watch detail during assembly" />
+          <div class="story-entry__copy">
+            <p class="eyebrow">Workshop note</p>
+            <h3>Centering the dial.</h3>
+            <p>
+              A hole needs to be cut in the middle of the dial for the movement's hands to fit through.
+              The most interesting part of this process was making the jig that holds the dial in place.
+            </p>
+          </div>
+        </article>
+
+        <article class="story-entry">
+          <img src="./pictures_Story/DSC09249-2.webp" alt="Model Jedan on wrist" />
+          <div class="story-entry__copy">
+            <p class="eyebrow">Workshop note</p>
+            <h3>The most important invention: my sanding jig.</h3>
+            <p>
+              One of the biggest pains in the whole process was figuring out how to sand the dials.
+              The 3D-printed jig I designed to hold the dial in place was a gamechanger.
+            </p>
+          </div>
+        </article>
+
+        <article class="story-entry">
+          <img src="./pictures_Story/HJBsBwIXwAAQ2JO.webp" alt="Finished Viktor Watch detail" />
+          <div class="story-entry__copy">
+            <p class="eyebrow">The result</p>
+            <h3>The process is the product.</h3>
+            <p>
+              Nothing is hidden away. The work that goes into every watch is its own part of it,
+              and that story stays visible.
+            </p>
+          </div>
+        </article>
+
+        <div class="button-row story-more-row">
+          <a class="button button--dark" href="./pages/about-us/index.html">Read Full Story</a>
         </div>
       </div>
     </section>
