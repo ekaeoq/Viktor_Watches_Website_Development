@@ -62,7 +62,11 @@
       previewDescription.textContent = description;
       previewLink.setAttribute("href", href);
       previewButton.setAttribute("href", href);
-      previewButton.textContent = title === "Model Jedan" ? "View Model" : "Open " + title;
+      previewButton.textContent = title === "Model Jedan"
+        ? "View Model"
+        : title === "Pre-order Model Dwa"
+          ? "Pre-order"
+          : "Open " + title;
       previewImage.classList.remove("is-changing");
     }, 90);
   }

@@ -410,7 +410,7 @@ main {
 }
 
 .hero-home__image {
-  background: url("Dwa_launch_pics/DSC03979.webp") center / cover no-repeat;
+  background: url("Dwa_launch_pics/pic2.webp") center / cover no-repeat;
   transform: scale(1.01);
 }
 
@@ -668,6 +668,12 @@ h3 {
   border: 1px solid var(--ink);
 }
 
+.btn--disabled {
+  cursor: not-allowed;
+  opacity: 0.54;
+  pointer-events: none;
+}
+
 .shop-section {
   width: min(1040px, calc(100% - var(--pad) * 2));
   margin: 0 auto;
@@ -788,27 +794,32 @@ h3 {
   padding-right: 18px;
 }
 
-.titanium-piece-unique-page .specs {
+.titanium-piece-unique-page .specs,
+.model-dwa-preorder-page .specs {
   margin-top: 18px;
   border-bottom: 1px solid rgba(27, 24, 20, 0.12);
 }
 
-.titanium-piece-unique-page .row {
+.titanium-piece-unique-page .row,
+.model-dwa-preorder-page .row {
   min-height: 36px;
   padding-top: 7px;
   padding-bottom: 7px;
   border-bottom: 0;
 }
 
-.titanium-piece-unique-page .row:nth-child(odd) {
+.titanium-piece-unique-page .row:nth-child(odd),
+.model-dwa-preorder-page .row:nth-child(odd) {
   padding-right: 14px;
 }
 
-.titanium-piece-unique-page .row:nth-child(even) {
+.titanium-piece-unique-page .row:nth-child(even),
+.model-dwa-preorder-page .row:nth-child(even) {
   padding-left: 14px;
 }
 
-.titanium-piece-unique-page .row.full {
+.titanium-piece-unique-page .row.full,
+.model-dwa-preorder-page .row.full {
   padding-right: 14px;
 }
 
@@ -2175,7 +2186,11 @@ h3 {
   .titanium-piece-unique-page .row,
   .titanium-piece-unique-page .row:nth-child(odd),
   .titanium-piece-unique-page .row:nth-child(even),
-  .titanium-piece-unique-page .row.full {
+  .titanium-piece-unique-page .row.full,
+  .model-dwa-preorder-page .row,
+  .model-dwa-preorder-page .row:nth-child(odd),
+  .model-dwa-preorder-page .row:nth-child(even),
+  .model-dwa-preorder-page .row.full {
     padding-left: 0;
     padding-right: 0;
   }
