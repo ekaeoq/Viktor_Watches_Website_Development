@@ -881,6 +881,10 @@ h3 {
   line-height: 0.95;
 }
 
+.model-dwa-preorder-page .bid-panel__amount {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
 .bid-panel--finished .bid-panel__amount {
   font-size: clamp(2rem, 4vw, 3.3rem);
 }
